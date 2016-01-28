@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76BADF500D9E11B502F1B366 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E2E2D7A1B810C659C03963 /* Pods.framework */; };
 		F6080D111C5A03FF000CAF16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6080D101C5A03FF000CAF16 /* AppDelegate.swift */; };
 		F6080D131C5A03FF000CAF16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6080D121C5A03FF000CAF16 /* ViewController.swift */; };
 		F6080D161C5A03FF000CAF16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6080D141C5A03FF000CAF16 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7FE03CDA15F99ED1DDBAEABC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B546EB4259C4D10DD74091CF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F1E2E2D7A1B810C659C03963 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6080D0D1C5A03FF000CAF16 /* weatherMen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weatherMen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6080D101C5A03FF000CAF16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6080D121C5A03FF000CAF16 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76BADF500D9E11B502F1B366 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		445F9A959BDF2C0564EBD915 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B546EB4259C4D10DD74091CF /* Pods.debug.xcconfig */,
+				7FE03CDA15F99ED1DDBAEABC /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7E1D15AED9DD216A1499638C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1E2E2D7A1B810C659C03963 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F6080D041C5A03FF000CAF16 = {
 			isa = PBXGroup;
 			children = (
 				F6080D0F1C5A03FF000CAF16 /* weatherMen */,
 				F6080D0E1C5A03FF000CAF16 /* Products */,
+				445F9A959BDF2C0564EBD915 /* Pods */,
+				7E1D15AED9DD216A1499638C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F6080D1F1C5A03FF000CAF16 /* Build configuration list for PBXNativeTarget "weatherMen" */;
 			buildPhases = (
+				62DD465AECED79E8CF418DD8 /* Check Pods Manifest.lock */,
 				F6080D091C5A03FF000CAF16 /* Sources */,
 				F6080D0A1C5A03FF000CAF16 /* Frameworks */,
 				F6080D0B1C5A03FF000CAF16 /* Resources */,
+				F99094DD59E3CB3E49904846 /* Embed Pods Frameworks */,
+				85F818189A9708FB0ABA3062 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		62DD465AECED79E8CF418DD8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		85F818189A9708FB0ABA3062 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F99094DD59E3CB3E49904846 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F6080D091C5A03FF000CAF16 /* Sources */ = {
@@ -245,6 +320,7 @@
 		};
 		F6080D201C5A03FF000CAF16 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B546EB4259C4D10DD74091CF /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = weatherMen/Info.plist;
@@ -256,6 +332,7 @@
 		};
 		F6080D211C5A03FF000CAF16 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FE03CDA15F99ED1DDBAEABC /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = weatherMen/Info.plist;
@@ -284,6 +361,7 @@
 				F6080D211C5A03FF000CAF16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
