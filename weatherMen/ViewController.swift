@@ -12,15 +12,16 @@ import MapKit
 
 
 class ViewController: UIViewController {
+    
+//    1. get user location using CLLocationManager
+//    2. use latitude and longitude to pull down data from weather api with alamofire
+//    3. parse json
+//    4. reflect weather in UI
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 
