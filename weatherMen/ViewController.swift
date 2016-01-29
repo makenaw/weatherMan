@@ -23,7 +23,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var lat: String!
     var lon: String!
 
-    var _dynamicEndPoint = ""
+    var dynamicEndPoint: String?
 
     
     let locationManager = CLLocationManager()
@@ -45,18 +45,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
         let lat = locValue.latitude
         let lon = locValue.longitude
-        let dynamic = "\(BASE_URL)lat=\(lat)&lon=\(lon)\(APPID)"
-        _dynamicEndPoint = dynamic
+        dynamicEndPoint = "\(BASE_URL)lat=\(lat)&lon=\(lon)\(APPID)"
+        if dynamicEndPoint != nil {
+            downloadWeather()
+        }
     }
     
-    override func viewWillAppear(animated: Bool) {
-        print("\(_dynamicEndPoint)")
-        downloadWeather()
-    }
     
     func downloadWeather() {
 
-        let url = NSURL(string: _dynamicEndPoint)
+        let url = NSURL(string: dynamicEndPoint!)
         Alamofire.request(.GET, url!).responseJSON { response in
            let result = response.result
             print(result.value.debugDescription)
