@@ -13,6 +13,7 @@
 		F6080D161C5A03FF000CAF16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6080D141C5A03FF000CAF16 /* Main.storyboard */; };
 		F6080D181C5A03FF000CAF16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6080D171C5A03FF000CAF16 /* Assets.xcassets */; };
 		F6080D1B1C5A03FF000CAF16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6080D191C5A03FF000CAF16 /* LaunchScreen.storyboard */; };
+		F642DA111C5CBD4A001CCB40 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = F642DA101C5CBD4A001CCB40 /* Weather.swift */; };
 		F6E64FAE1C5A3C13008A03FC /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E64FAD1C5A3C13008A03FC /* constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		F6080D171C5A03FF000CAF16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6080D1A1C5A03FF000CAF16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6080D1C1C5A03FF000CAF16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F642DA101C5CBD4A001CCB40 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		F6E64FAD1C5A3C13008A03FC /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +89,7 @@
 				F6080D191C5A03FF000CAF16 /* LaunchScreen.storyboard */,
 				F6080D1C1C5A03FF000CAF16 /* Info.plist */,
 				F6E64FAD1C5A3C13008A03FC /* constants.swift */,
+				F642DA101C5CBD4A001CCB40 /* Weather.swift */,
 			);
 			path = weatherMen;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F642DA111C5CBD4A001CCB40 /* Weather.swift in Sources */,
 				F6080D131C5A03FF000CAF16 /* ViewController.swift in Sources */,
 				F6080D111C5A03FF000CAF16 /* AppDelegate.swift in Sources */,
 				F6E64FAE1C5A3C13008A03FC /* constants.swift in Sources */,
