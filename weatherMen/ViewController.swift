@@ -13,6 +13,9 @@ import MapKit
 
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
+    @IBOutlet weak var tempLbl: UILabel!
+    @IBOutlet weak var windLbl: UILabel!
+    @IBOutlet weak var weatherLbl: UILabel!
     
     var lat: String!
     var lon: String!
@@ -23,7 +26,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     var todaysWeather = Weather()
-
     let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
