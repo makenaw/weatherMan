@@ -22,6 +22,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var holder: String? {
         didSet {
             todaysWeather.dynamicEndPoint = holder!
+            todaysWeather.downloadWeather { () -> () in
+                self.updateUI()
+            }
+            
         }
     }
     
@@ -38,10 +42,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
             locationManager.startUpdatingLocation()
         }
-    
     }
     
+    func updateUI() {
+        weatherLbl.text = todaysWeather.desc
+        windLbl.text = todaysWeather.windSpeed
+        tempLbl.text = todaysWeather.temp
+    }
 
+    
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
         let lat = locValue.latitude

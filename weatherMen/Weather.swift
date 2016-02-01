@@ -12,20 +12,14 @@ import Alamofire
 class Weather {
     
     init() {
-        
     }
     
-    var desc = "empty string"
-    var temp = "empty string"
-    var windSpeed = "empty string"
-    var dynamicEndPoint = "empty string" {
-        didSet {
-            downloadWeather()
-        }
-    }
+    var desc: String?
+    var temp: String?
+    var windSpeed: String?
+    var dynamicEndPoint: String!
     
-    
-    func downloadWeather() {
+    func downloadWeather(completed: downloadComplete) {
         
         let url = NSURL(string: dynamicEndPoint)
         Alamofire.request(.GET, url!).responseJSON { response in
@@ -49,7 +43,7 @@ class Weather {
                     }
                 }
             }
-            
+            completed()
         }
     }
 }
