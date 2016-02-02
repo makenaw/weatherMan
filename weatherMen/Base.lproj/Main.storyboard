@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -20,73 +21,55 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sky" translatesAutoresizingMaskIntoConstraints="NO" id="xHF-A7-nqC">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ZpU-pY-bPa">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="GDQ-rp-3yH">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="194"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's temperature:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0d-l5-Hju">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="194"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HX0-aX-6xA">
-                                                <rect key="frame" x="300" y="0.0" width="300" height="194"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fX6-B1-EnJ">
-                                        <rect key="frame" x="0.0" y="194" width="600" height="193"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's wind:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBX-1K-KeH">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="193"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1y-gz-DiU">
-                                                <rect key="frame" x="300" y="0.0" width="300" height="193"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pcj-Dg-W8h">
-                                        <rect key="frame" x="0.0" y="387" width="600" height="194"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's weather:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXO-PZ-Vhg">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="194"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2To-vJ-RdI">
-                                                <rect key="frame" x="300" y="0.0" width="300" height="194"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Temp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HX0-aX-6xA">
+                                <rect key="frame" x="0.0" y="72" width="374" height="194"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.27058823529411763" green="0.27058823529411763" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's Weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2To-vJ-RdI">
+                                <rect key="frame" x="40" y="0.0" width="520" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="8gr-JF-WwV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.27058823529411763" green="0.27058823529411763" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cloud" translatesAutoresizingMaskIntoConstraints="NO" id="jiY-Dz-hCQ">
+                                <rect key="frame" x="0.0" y="75" width="415" height="194"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wind" translatesAutoresizingMaskIntoConstraints="NO" id="faB-yR-cW9">
+                                <rect key="frame" x="172" y="285" width="428" height="227"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="227" id="IK0-ai-Lqu"/>
+                                    <constraint firstAttribute="width" constant="428" id="RsS-8R-9rB"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1y-gz-DiU">
+                                <rect key="frame" x="370" y="319" width="85" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="Q28-Lz-Tpb"/>
+                                    <constraint firstAttribute="width" constant="85" id="Q7F-f8-bqi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.20189886922115252" green="0.10448536689396616" blue="0.0012751122787703427" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ZpU-pY-bPa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="53F-Qi-RXt"/>
-                            <constraint firstAttribute="trailing" secondItem="xHF-A7-nqC" secondAttribute="trailing" id="6DH-9a-D52"/>
-                            <constraint firstItem="xHF-A7-nqC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8wV-jV-9q3"/>
-                            <constraint firstItem="xHF-A7-nqC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YRQ-z2-yyV"/>
-                            <constraint firstAttribute="trailing" secondItem="ZpU-pY-bPa" secondAttribute="trailing" id="ZLg-Gn-JA4"/>
-                            <constraint firstItem="ZpU-pY-bPa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fPa-vB-ZIf"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZpU-pY-bPa" secondAttribute="bottom" constant="20" id="fR3-rQ-Yei"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xHF-A7-nqC" secondAttribute="bottom" id="p98-7F-F2S"/>
+                            <constraint firstItem="2To-vJ-RdI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="8Ze-NA-kha"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="X1y-gz-DiU" secondAttribute="bottom" constant="218" id="Bll-uy-B3g"/>
+                            <constraint firstAttribute="trailing" secondItem="xHF-A7-nqC" secondAttribute="trailing" id="CHo-If-3yz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xHF-A7-nqC" secondAttribute="bottom" id="FGR-28-I0R"/>
+                            <constraint firstItem="xHF-A7-nqC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KoP-zp-ybf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="faB-yR-cW9" secondAttribute="bottom" constant="88" id="Uzs-vz-2Ke"/>
+                            <constraint firstAttribute="trailing" secondItem="faB-yR-cW9" secondAttribute="trailing" id="d5L-w7-h7H"/>
+                            <constraint firstItem="2To-vJ-RdI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="kWq-q6-QNb"/>
+                            <constraint firstItem="xHF-A7-nqC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nAc-sx-Zl0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2To-vJ-RdI" secondAttribute="trailing" constant="20" id="nCi-OO-uRG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="X1y-gz-DiU" secondAttribute="trailing" constant="125" id="qqm-fz-wWz"/>
                         </constraints>
                     </view>
                     <connections>
@@ -101,6 +84,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cloud" width="204" height="160"/>
         <image name="sky" width="1212" height="810"/>
+        <image name="wind" width="254" height="177"/>
     </resources>
 </document>
