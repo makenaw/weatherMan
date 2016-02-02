@@ -24,6 +24,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             todaysWeather.dynamicEndPoint = holder!
             todaysWeather.downloadWeather { () -> () in
                 self.updateUI()
+                print(self.todaysWeather.dynamicEndPoint)
             }
             
         }
@@ -46,8 +47,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func updateUI() {
         weatherLbl.text = todaysWeather.desc
-        windLbl.text = todaysWeather.windSpeed
-        tempLbl.text = todaysWeather.temp
+        windLbl.text = "\(String(round(Float(todaysWeather.windSpeed!)!))) MPH"
+        tempLbl.text = "\(String(round(Float(todaysWeather.temp!)!))) °F"
     }
 
     
@@ -55,7 +56,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
         let lat = locValue.latitude
         let lon = locValue.longitude
-        let url = "\(BASE_URL)lat=\(lat)&lon=\(lon)\(APPID)"
+        let url = "\(BASE_URL)lat=\(lat)&lon=\(lon)&units=imperial\(APPID)"
         holder = url
     }
 }

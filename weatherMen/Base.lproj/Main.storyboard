@@ -17,20 +17,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sky" translatesAutoresizingMaskIntoConstraints="NO" id="xHF-A7-nqC">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ZpU-pY-bPa">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="GDQ-rp-3yH">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="193.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="194"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's temperature:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0d-l5-Hju">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="193.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="194"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HX0-aX-6xA">
-                                                <rect key="frame" x="300" y="0.0" width="300" height="193.5"/>
+                                                <rect key="frame" x="300" y="0.0" width="300" height="194"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -38,7 +41,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fX6-B1-EnJ">
-                                        <rect key="frame" x="0.0" y="193" width="600" height="193"/>
+                                        <rect key="frame" x="0.0" y="194" width="600" height="193"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's wind:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBX-1K-KeH">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="193"/>
@@ -55,16 +58,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pcj-Dg-W8h">
-                                        <rect key="frame" x="0.0" y="386" width="600" height="193.5"/>
+                                        <rect key="frame" x="0.0" y="387" width="600" height="194"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's weather:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXO-PZ-Vhg">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="193.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="194"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2To-vJ-RdI">
-                                                <rect key="frame" x="300" y="0.0" width="300" height="193.5"/>
+                                                <rect key="frame" x="300" y="0.0" width="300" height="194"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -77,9 +80,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ZpU-pY-bPa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="53F-Qi-RXt"/>
+                            <constraint firstAttribute="trailing" secondItem="xHF-A7-nqC" secondAttribute="trailing" id="6DH-9a-D52"/>
+                            <constraint firstItem="xHF-A7-nqC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8wV-jV-9q3"/>
+                            <constraint firstItem="xHF-A7-nqC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YRQ-z2-yyV"/>
                             <constraint firstAttribute="trailing" secondItem="ZpU-pY-bPa" secondAttribute="trailing" id="ZLg-Gn-JA4"/>
                             <constraint firstItem="ZpU-pY-bPa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fPa-vB-ZIf"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZpU-pY-bPa" secondAttribute="bottom" constant="20" id="fR3-rQ-Yei"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xHF-A7-nqC" secondAttribute="bottom" id="p98-7F-F2S"/>
                         </constraints>
                     </view>
                     <connections>
@@ -93,4 +100,7 @@
             <point key="canvasLocation" x="375" y="334"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sky" width="1212" height="810"/>
+    </resources>
 </document>
